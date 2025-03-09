@@ -12,11 +12,11 @@ const Navbar = () => {
         <Link to="/dashboard" className="logo">Job Board</Link>
         <div className="nav-links">
           {/* About Section Trigger */}
-          <span className="nav-item" onClick={() => setShowAbout(!showAbout)}>
+          <span className="nav-item logo" onClick={() => setShowAbout(!showAbout)}>
             About
           </span>
           
-          <Link to="/profile">Profile</Link>
+          <Link to="/profile" className="logo">Profile</Link>
           <button onClick={() => { localStorage.removeItem("token"); window.location.href = "/" }} className="logout-btn">
             Logout
           </button>
@@ -40,7 +40,11 @@ const Navbar = () => {
             <h3>About This Project</h3>
             <p>This Job Board project allows users to register as an Employee or Company, apply for jobs, and manage job listings. Built using the **MERN Stack**, it features user authentication, job filtering, and an interactive UI.</p>
           </div>
+          
         </div>
+        <div className="lines">______</div>
+          <div className="lines">____</div>
+          <div className="lines">__</div>
       </div>
     </>
   );

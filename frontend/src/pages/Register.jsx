@@ -24,6 +24,7 @@ const Register = () => {
   return (
     <div className="form-container">
       <h2>Register</h2>
+      <div className="form-input">
       <form onSubmit={handleRegister}>
         <input type="text" placeholder="Full Name" value={name} onChange={(e) => setName(e.target.value)} required />
         <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} required />
@@ -34,6 +35,7 @@ const Register = () => {
         </select>
         <button type="submit" className="button">Register</button>
       </form>
+      </div>
       <div className="extra-options">
         <Link to="/">Back to Login</Link>
       </div>

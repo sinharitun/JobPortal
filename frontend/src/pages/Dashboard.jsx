@@ -34,12 +34,14 @@ const Dashboard = () => {
         
         {/* Sidebar - Search & Filters */}
         <div className="sidebar">
+          <div className="search">
           <input 
             type="text" 
             placeholder="Search Jobs..." 
             value={search} 
             onChange={(e) => setSearch(e.target.value)} 
           />
+          </div>
           
           <div className="filters">
             <h3>Filter Jobs</h3>
@@ -74,7 +76,7 @@ const Dashboard = () => {
               <p><strong>Location:</strong> {job.location ? job.location : "Not specified"}</p> {/* ✅ Added location */}
               <p><strong>Salary:</strong> {job.salary}</p>
               <p>{job.description}</p>
-              <button className="apply-btn">Apply Now</button>
+              <button className="apply-btn" onClick={() => navigate(`/apply/${job._id}`)}>Apply Now</button>
             </div>
         ))}
       </div>

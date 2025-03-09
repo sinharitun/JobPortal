@@ -6,6 +6,7 @@ import ForgotPassword from "./pages/ForgotPassword";
 import ResetPassword from "./pages/ResetPassword";
 import Dashboard from "./pages/Dashboard";
 import Profile from "./pages/Profile";
+import ApplyForm from "./components/ApplyForm";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/forgot-password" element={<ForgotPassword />} />
           <Route path="/reset-password/:token" element={<ResetPassword />} />
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/apply/:jobId" element={<ApplyForm />} />
           <Route path="/profile" element={<Profile />} />
         </Routes>
       </div>

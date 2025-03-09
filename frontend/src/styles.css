@@ -1,4 +1,4 @@
-/* General */
+General
 * {
     margin: 0;
     padding: 0;
@@ -7,47 +7,69 @@
   }
   
   body {
-    background-color: #f4f4f4;
+    margin: 0;
+    background-color: #1d173e; /* Light Gray Background */
+    color: #FFFFFF; /* White Text */
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+
+    min-height: 100vh; /* Ensures full page height */
+  }
+  body::-webkit-scrollbar {
+    display: none;
   }
   
   /* Form Container */
   .form-container {
-    max-width: 400px;
+    width: 600px;
+    height: 400px;
     padding: 20px;
-    background: white;
-    border-radius: 5px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    background: #0a192f;
+    border-radius: 20px;
+    box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.2);
     text-align: center;
   }
   
   .form-container h2 {
+    color: #FFD700;
     margin-bottom: 15px;
+    font-size: 30px;
+  }
+  .form-input{
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    align-items: center;
+    
   }
   
   input, select {
-    width: 100%;
+    width: 70%;
     padding: 10px;
     margin: 10px 0;
-    border: 1px solid #ccc;
+    border: 1px solid #FFD700;
     border-radius: 5px;
+    background: #1F4068; /* Deep Blue */
+    color: #FFFFFF;
+    /* margin-bottom: ; */
   }
   
   .button {
-    width: 100%;
-    background-color: #007bff;
-    color: white;
-    padding: 10px;
+    width: 150px;
+    background-color: #FFD700; /* Gold */
+    color: #0A192F; /* Dark Blue */
+    padding: 12px;
     border-radius: 5px;
     border: none;
     cursor: pointer;
+    margin: 20px auto;
   }
   
   .button:hover {
-    background-color: #0056b3;
+    background-color: #E6C200;
   }
   
   .extra-options {
@@ -58,30 +80,25 @@
     display: block;
     color: #007bff;
     text-decoration: none;
-    margin-top: 5px;
+    margin-top: 10px;
   }
   
   .extra-options a:hover {
     text-decoration: underline;
   }
-
-
-  .dashboard {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-  }
   
-  /* Navbar */
  /* Navbar */
 .navbar {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  background-color: #007bff;
+  margin-right: 10px;
+  font-size: 20px;
+  /* right: ; */
+  width: 98%;
+  background-color: #0A192F; /* Dark Navy Blue */
   padding: 15px 20px;
-  color: white;
+  color: #FFD700; /* Gold */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -100,33 +117,38 @@
 }
 
 .navbar a {
-  color: white;
+  color: #FFD700; /* Gold */
   text-decoration: none;
   font-weight: bold;
   margin: 0 15px;
 }
 
 .navbar .logout-btn {
-  background: red;
+  background: #FF4D4D; /* Soft Red */
   padding: 8px 12px;
+  margin: 0 30px ;
   border: none;
   cursor: pointer;
   color: white;
   border-radius: 5px;
 }
-
-.navbar .logout-btn:hover {
-  background: darkred;
+.logo:hover{
+  text-shadow: 0 0 10px #ceaf00;
 }
 
-/* About Section (Sliding Down from Top) */
+.navbar .logout-btn:hover {
+  background: #CC0000; /* Dark Red */
+}
+
+ /* About Section (Sliding Down from Top) */
 .about-section {
   position: fixed;
   top: -60%; /* Initially hidden */
   left: 0;
   width: 100%;
-  height: 60vh; /* Takes 60% of the screen */
-  background: white;
+  height: 70vh; /* Takes 60% of the screen */
+  background-color: #0A192F; /* Dark Blue */
+  color: white;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
   transition: top 0.4s ease-in-out;
   z-index: 999;
@@ -151,13 +173,15 @@
 }
 
 .developer-photo {
-  width: 180px;
-  height: 200px;
+  /* width: 180px; */
+  height: 300px;
+  width: 170px;
   border-radius: 50%;
 }
 
 /* Right Section - About Info */
 .about-right {
+  color: #f8f6bd;
   flex: 2;
   padding: 20px;
   overflow-y: auto; /* Scrollable if content is long */
@@ -172,12 +196,18 @@
 }
 
 .about-right a {
-  color: #007bff;
+  color: #fff700;
   text-decoration: none;
 }
 
 .about-right a:hover {
   text-decoration: underline;
+}
+.lines{
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: -110px;
 }
 
 /* Close Button */
@@ -189,75 +219,92 @@
   border: none;
   font-size: 24px;
   cursor: pointer;
-  color: #333;
+  color: #ffffff;
 }
 
 .close-btn:hover {
-  color: red;
+  color: rgb(255, 146, 146);
 }
 
 /* Add margin to all pages so content doesn't hide under navbar */
 .page-content {
   margin-top: 80px; /* Push content below navbar */
   padding: 20px;
-}
+  /* width: 80%; */
+} 
 
+/* Dashboard Content */
+
+.dashboard {
+  margin-top: 60px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
   
-  /* Dashboard Content */
+}
+.search{
+  width: 260px;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+  
   .dashboard-content {
     display: flex;
     flex: 1;
     padding: 20px;
+
   }
   
   /* Sidebar */
   .sidebar {
-    width: 250px;
-    background: white;
+    width: 300px;
+    background: #1F4068; /* Deep Blue */
     padding: 15px;
-    border-radius: 5px;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
   }
   
-  .sidebar input {
+  .sidebar input, .filters select {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #FFD700; 
     border-radius: 5px;
+    background: #0A192F; /* Dark Navy Blue */
+    color: #FFFFFF;
   }
   
-  .filters select {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
   
   /* Job Listings */
   .job-listings {
     flex: 1;
+    width: 700px;
     margin-left: 20px;
     overflow-y: auto;
-    height: 500px;
+    height: 100%;
+    border-radius: 10px;
+  }
+  .job-listings::-webkit-scrollbar {
+    display: none;
   }
   
   .job-card {
-    background: white;
+    background: #1F4068; /* Deep Blue */
     padding: 15px;
     margin-bottom: 10px;
-    border-radius: 5px;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
   }
   
   .job-card h2 {
-    color: #007bff;
+    color: #FFD700; /* Gold */
   }
   
   .apply-btn {
-    background-color: #007bff;
-    color: white;
+    background-color: #FFD700; /* Gold */
+    color: #0A192F; /* Dark Blue */
     padding: 8px 12px;
     border: none;
     cursor: pointer;
@@ -266,79 +313,227 @@
   }
   
   .apply-btn:hover {
-    background-color: #0056b3;
+    background-color: #E6C200; /* Slightly Darker Gold */
   }
   
-  /* Footer */
-  .footer {
+  /* Profile Page */
+  .profile-container {
+    width: 90vb;
+    color: #f1ebc6;
+    margin: auto;
+    padding: 20px;
+    background: #0A192F; /* Dark Navy Blue */
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .profile-header {
+    margin: 20px;
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+  }
+  .profile-header h2{
+    font-size: 30px;
+    color: #fff700;
+  }
+  .profile-details p {
+    margin-top: 20px;
+    
+  }
+  .profile-details{
+    margin-left: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .profile-left {
+    flex: 1;
     text-align: center;
-    background: #333;
-    color: white;
+    position: relative;
+  }
+  .profile-section {
+    margin-bottom: 15px;
+}
+  
+ 
+  input, textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #FFD700; /* Gold */
+    border-radius: 5px;
+    background: #1F4068; /* Deep Blue */
+    color: #FFFFFF;
+}
+  .edit-button {
+    background: #FFD700; /* Gold */
+    color: #0A192F; /* Dark Blue */
+    /* position: absolute; */
+    /* bottom: 5px; */
+    /* right: 5px; */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+     width: 140px; 
+    padding: 5px;
+    font-size: 15px; 
+  }
+  
+  .profile-right {
+    flex: 2;
     padding: 10px;
   }
-  /* Profile Page */
-.profile-container {
-  max-width: 600px;
-  margin: 50px auto;
-  padding: 20px;
-  background: white;
+  
+  .edit-button:hover {
+    background: #E6C200; /* Slightly Darker Gold */
+  }
+  
+  .profile-divider {
+    width: 100%;
+    margin: 15px 0;
+    border: 1px solid #FFD700;
+  }
+  
+  /* textarea {
+    width: 100%;
+    padding: 5px;
+  } */
+  
+  .save-button {
+    margin-left: 10px;
+    background: green;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .save-button:hover {
+    background: darkgreen;
+  }
+
+  /* Apply form page */
+
+
+  .apply-form-container {
+    width: 600px;
+    height: 66vh;
+    /* margin: auto; */
+    padding: 20px;
+    background: #0A192F;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  .apply-form-container h2{
+    color: #FFD700;
+  }
+  
+  .apply-form-container input {
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    padding: 8px;
+    margin: 15px;
+    border: 1px solid #FFD700; /* Gold */
+    border-radius: 5px;
+    background: #1F4068; /* Deep Blue */
+    color: #FFFFFF;
+  }
+  
+  .apply-buttons {
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 25px;
+  }
+  
+  .apply-submit-btn {
+    background: #FFD700; /* Gold */
+    color: #0A192F; /* Dark Blue */
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    width: 150px;
+    border-radius: 20px;
+  }
+  
+  .apply-submit-btn:hover {
+    background: #E6C200; /* Slightly Darker Gold */
+  }
+  
+  .apply-close-btn {
+    background: red;
+    color: white;
+    padding: 10px;
+    border: none;
+    width: 150px;
+    cursor: pointer;
+    border-radius: 20px;
+  }
+  
+  .apply-close-btn:hover {
+    background: darkred;
+  }
+  
+    /* Footer */
+    /* .footer {
+      width: ;
+      text-align: center;
+      background: #0A192F; 
+      color: #FFD700; 
+      padding: 10px;
+    } */
+.footer{
+  width: 100%; /* Ensures full width */
+    background: #0A192F; /* Dark Navy Blue */
+    color: #FFD700; /* Gold */
+    text-align: center;
+    /* padding: 15px; */
+    margin-top: 20px; /* Adds spacing from content above */
+}
+.create-job-btn {
+  background: #FFD700; /* Gold */
+  color: #0A192F; /* Dark Navy Blue */
+  padding: 10px 15px;
+  border: none;
   border-radius: 5px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  text-align: center;
+  cursor: pointer;
+  margin-top: 10px;
 }
 
-.profile-image {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  margin-bottom: 10px;
+.create-job-btn:hover {
+  background: #E6C200; /* Slightly Darker Gold */
+}
+
+.job-form {
+  background: #1F4068; /* Deep Blue */
+  padding: 15px;
+  border-radius: 5px;
+  margin-top: 10px;
+  color: white;
 }
 
 .job-form input,
 .job-form textarea {
   width: 100%;
-  padding: 10px;
-  margin: 10px 0;
-  border: 1px solid #ccc;
+  padding: 8px;
+  border: 1px solid #FFD700; /* Gold */
   border-radius: 5px;
+  background: #0A192F; /* Dark Navy */
+  color: #FFFFFF;
 }
 
-.button {
-  background-color: #007bff;
+.job-form button {
+  background: green;
   color: white;
   padding: 10px;
-  border-radius: 5px;
-  cursor: pointer;
   border: none;
+  cursor: pointer;
 }
 
-.button:hover {
-  background-color: #0056b3;
-}
-.profile-header {
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-.profile-left {
-  flex: 1;
-  text-align: center;
-}
-
-.profile-image {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-}
-
-.profile-right {
-  flex: 2;
-  padding: 10px;
-}
-
-.profile-divider {
-  width: 60%;
-  margin: 20px auto;
-  border: 1px solid #ccc;
+.job-form button:hover {
+  background: darkgreen;
 }
