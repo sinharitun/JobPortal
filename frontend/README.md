@@ -1,12 +1,28 @@
-# React + Vite
+# Project Title
+Job Board
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A website where user can find and apply for their dream job and client/company can create new post for hiring and can review the applicants based on their qualification.
 
-Currently, two official plugins are available:
+## 🚀 Demo
+![alt text](<../output/Screenshot (72).png>)
+![alt text](<../output/Screenshot (73).png>)
+![alt text](<../output/Screenshot (74).png>)
+![alt text](<../output/Screenshot (75).png>)
+![alt text](<../output/Screenshot (76).png>)
+![alt text](<../output/Screenshot (77).png>)
+![alt text](<../output/Screenshot (90).png>)
+## 🛠️ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Job Listings Management — Companies can post, update, and manage job openings easily.
+- User Authentication — Secure sign-up and login system for both candidates and recruiters
+- Resume Upload — Candidates can upload their resumes directly to apply for jobs.
+- Advanced Job Search — Search and filter jobs by title, location, category, or experience level.
+- Company Profiles — Recruiters can create and edit detailed company profiles.
+-  Responsive Design — Fully mobile-friendly and optimized for all screen sizes.
 
-## Expanding the ESLint configuration
+## 🧩 Tech Stack
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+**Frontend:** React, Vite  
+**Backend:** Node.js, Express, Mongodb  
+
+
